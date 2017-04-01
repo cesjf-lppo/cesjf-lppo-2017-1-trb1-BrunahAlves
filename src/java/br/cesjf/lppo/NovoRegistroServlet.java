@@ -48,9 +48,9 @@ public class NovoRegistroServlet extends HttpServlet {
   
 
         } catch (ClassNotFoundException ex) {
-          //  Logger.getLogger(ListaRegistrosServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ListaRegistrosServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-           // Logger.getLogger(ListaRegistrosServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ListaRegistrosServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         response.sendRedirect("lista.html");
