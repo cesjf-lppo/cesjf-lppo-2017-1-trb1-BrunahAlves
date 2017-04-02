@@ -28,6 +28,7 @@
                     <td>${equipamento.local}</td>
                     <td>${equipamento.descricao}</td>
                     <td>${equipamento.estado}</td>
+                    <td><a href="exclui.html?id=${equipamento.id}">X</a></td>
                 </tr>
             </c:forEach>
         </table>
