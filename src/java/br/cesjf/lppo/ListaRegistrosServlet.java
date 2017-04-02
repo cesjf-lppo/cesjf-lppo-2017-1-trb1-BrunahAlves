@@ -24,6 +24,7 @@ public class ListaRegistrosServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Equipamento> equipamentos = new ArrayList<>();
+     
         try {
 
             Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -38,6 +39,7 @@ public class ListaRegistrosServlet extends HttpServlet {
                 equipamento.setLocal(resultado.getString("local"));
                 equipamento.setDescricao(resultado.getString("descricao"));
                 equipamento.setEstado(resultado.getInt("estado"));
+                equipamentos.add(equipamento);
             }
 
         } catch (ClassNotFoundException ex) {
