@@ -14,10 +14,10 @@
     <body>
         <h1>Entrada de Equipamentos</h1>
         <form method="post">
-            <div><label>Número de serie: <input type="text" name="nome"></label></div>
-            <div><label>Local: <input type="text" name="email"></label></div>
+            <div><label>Número de serie: <input type="text" name="serie"></label></div>
+            <div><label>Local: <input type="text" name="local"></label></div>
             <div><label>Descricao: <textarea name="descricao"></textarea></label></div>
-            <select name="status" >
+            <select name="estado" >
                 <option value="0">0: Novo</option>
                 <option value="1">1: Em uso</option>
                 <option value="2">2: Danificado</option>
@@ -27,6 +27,3 @@
         </form>
     </body>
 </html>
-
-0: novo, 1: em uso,
-2: danificado e 3: perdido. 
