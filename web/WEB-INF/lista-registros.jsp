@@ -28,7 +28,6 @@
                     <td>${equipamento.local}</td>
                     <td>${equipamento.descricao}</td>
                     <td>${equipamento.estado}</td>
-
                 </tr>
             </c:forEach>
         </table>
