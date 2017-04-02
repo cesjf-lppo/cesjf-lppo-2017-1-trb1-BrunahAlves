@@ -1,7 +1,7 @@
 package br.cesjf.lppo;
 
 
-public class equipamento {
+public class Equipamento {
     private Long id;
     private String serie;
     private String local;
