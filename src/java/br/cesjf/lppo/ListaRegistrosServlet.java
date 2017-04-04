@@ -24,13 +24,14 @@ public class ListaRegistrosServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Equipamento> equipamentos = new ArrayList<>();
+        String filtro = request.getParameter("filtro");
      
         try {
 
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/lppo-2017-1", "usuario", "senha");
             Statement operacao = conexao.createStatement();
-            ResultSet resultado = operacao.executeQuery("SELECT * FROM equipamento ORDER BY local");
+            ResultSet resultado = operacao.executeQuery("SELECT * FROM equipamento " + filtro);
 
             while (resultado.next()) {
                 Equipamento equipamento = new Equipamento();
@@ -48,6 +49,7 @@ public class ListaRegistrosServlet extends HttpServlet {
             Logger.getLogger(ListaRegistrosServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
          request.setAttribute("equipamentos", equipamentos);
+          request.setAttribute("filtro", filtro);
         request.getRequestDispatcher("WEB-INF/lista-registros.jsp").forward(request, response);
     }
 
