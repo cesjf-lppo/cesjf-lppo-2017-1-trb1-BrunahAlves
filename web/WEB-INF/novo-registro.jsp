@@ -20,7 +20,7 @@
             <div><label>Local: <input type="text" name="local" class="form-control"></label></div>
             <div><label>Descricao: <textarea name="descricao" class="form-control"></textarea></label></div>
             <select name="estado">
-                <option value="0">0: Novo</option>
+                    <option value="0">0: Novo</option>
                 <option value="1">1: Em uso</option>
                 <option value="2">2: Danificado</option>
                 <option value="3">3: Perdido</option>

@@ -12,7 +12,16 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <form method="get">
         <h1>Lista Equipamentos</h1>
+        <select name="estado">
+                <option value="0" ${filtro==0?"selected":"0"}>0: Novo</option>
+                <option value="1" ${filtro==1?"selected":"1"}>1: Em uso</option>
+                <option value="2" ${filtro==2?"selected":"2"}>2: Danificado</option>
+                <option value="3" ${filtro==3?"selected":"3"}>3: Perdido</option>
+        </select>
+        <div><input type="submit" class="btn btn-default"></div>
+        </form>    
         <table>
             <tr>
                 <th>Id</th>
