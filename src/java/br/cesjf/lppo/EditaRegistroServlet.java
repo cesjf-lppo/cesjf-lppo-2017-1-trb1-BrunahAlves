@@ -55,9 +55,9 @@ public class EditaRegistroServlet extends HttpServlet {
             throws ServletException, IOException {
          Equipamento equipamento = new Equipamento();
         equipamento.setId(Long.parseLong(request.getParameter("id")));
-        equipamento.setSerie(request.getParameter("serie"));
+     //   equipamento.setSerie(request.getParameter("serie"));
         equipamento.setLocal(request.getParameter("local"));
-        equipamento.setDescricao(request.getParameter("descricao"));
+      //  equipamento.setDescricao(request.getParameter("descricao"));
  
        equipamento.setEstado(Integer.parseInt(request.getParameter("estado")));
 
@@ -66,10 +66,8 @@ public class EditaRegistroServlet extends HttpServlet {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/lppo-2017-1", "usuario", "senha");
             Statement operacao = conexao.createStatement();
-            operacao.executeUpdate("UPDATE equipamento SET serie='"
-                    + equipamento.getSerie() + "', local='"
-                    + equipamento.getLocal() + "', descricao='"
-                    + equipamento.getDescricao() + "', estado="
+            operacao.executeUpdate("UPDATE equipamento SET local='"
+                    + equipamento.getLocal() + "', estado="
                     + equipamento.getEstado() + " WHERE id=" 
                     + equipamento.getId());
 
