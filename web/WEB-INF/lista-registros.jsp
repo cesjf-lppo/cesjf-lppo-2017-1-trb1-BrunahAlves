@@ -52,9 +52,11 @@
                                 3: Perdido
                             </c:when>
                         </c:choose>
-                    <td><a href="exclui.html?id=${equipamento.id}">X</a></td>
+                    <td><a href="exclui.html?id=${equipamento.id}">Excluir</a></td>
+                    <td><a href="edita.html?id=${equipamento.id}">Editar</a></td>
                 </tr>
             </c:forEach>
         </table>
+        <div><a href="novo.html">Novo</a></li>
     </body>
 </html>
