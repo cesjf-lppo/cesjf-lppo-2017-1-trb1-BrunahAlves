@@ -31,7 +31,7 @@ public class ListaRegistrosServlet extends HttpServlet {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/lppo-2017-1", "usuario", "senha");
             Statement operacao = conexao.createStatement();
-            ResultSet resultado = operacao.executeQuery("SELECT * FROM equipamento ORDER BY local" + filtro);
+            ResultSet resultado = operacao.executeQuery("SELECT * FROM equipamento " + filtro);
 
             while (resultado.next()) {
                 Equipamento equipamento = new Equipamento();
