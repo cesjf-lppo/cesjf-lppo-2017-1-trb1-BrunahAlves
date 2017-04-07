@@ -33,8 +33,8 @@
                 <th>Local</th>
                 <th>Descricao</th>
                 <th>Estado</th>
-                <th>Excluir</th>
                 <th>Editar</th>
+                <th>Excluir</th>
             </tr>
             <c:forEach var="equipamento" items="${equipamentos}">
                 <tr>
@@ -57,8 +57,9 @@
                                 3: Perdido
                             </c:when>
                         </c:choose>
-                    <td><a type="button" class="btn btn-danger" href="exclui.html?id=${equipamento.id}">Excluir</a></td>
                     <td><a type="button" class="btn btn-info" href="edita.html?id=${equipamento.id}">Editar</a></td>
+                    <td><a type="button" class="btn btn-danger" href="exclui.html?id=${equipamento.id}">Excluir</a></td>
+                    
                 </tr>
             </c:forEach>
         </table>
