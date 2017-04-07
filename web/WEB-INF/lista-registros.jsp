@@ -15,7 +15,7 @@
     </head>
     <body>
         <form method="get">
-        <h2>Equipamentos cadastrados</h2>
+        <h2>Equipamentos Cadastrados</h2>
         <select name="filtro">
                  <option value="" ${(filtro=="")?"selected":""}>Todos</option>
                  <option value="WHERE estado=0" ${(filtro=="WHERE estado=0")?"selected":""}>0: Novo</option>
