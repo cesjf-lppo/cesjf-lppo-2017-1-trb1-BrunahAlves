@@ -18,10 +18,10 @@
         <h2>Equipamentos Cadastrados</h2>
         <select name="filtro">
                  <option value="" ${(filtro=="")?"selected":""}>Todos</option>
-                 <option value="WHERE estado=0" ${(filtro=="WHERE estado=0")?"selected":""}>0: Novo</option>
-                 <option value="WHERE estado=1" ${(filtro=="WHERE estado=1")?"selected":""}>1: Em uso</option>
-                 <option value="WHERE estado=2" ${(filtro=="WHERE estado=2")?"selected":""}>2: Danificado</option>
-                 <option value="WHERE estado=3" ${(filtro=="WHERE estado=3")?"selected":""}>3: Perdido</option>
+                 <option value="0" ${(filtro=="0")?"selected":""}>0: Novo</option>
+                 <option value="1" ${(filtro=="1")?"selected":""}>1: Em uso</option>
+                 <option value="2" ${(filtro=="2")?"selected":""}>2: Danificado</option>
+                 <option value="3" ${(filtro=="3")?"selected":""}>3: Perdido</option>
         </select>
         <div><input type="submit" value="Filtrar" class="btn btn-default"></div>
         </form>
@@ -64,7 +64,17 @@
             </c:forEach>
         </table>
         <div><a class="btn btn-default" href="novo.html" role="button">Novo</a></li>
+        <script>
+            document.getElementsByTagName("select")[0].addEventListener("change", function(){
+                console.log("Teste");
+                document.forms[0].submit();
+            })
+            
+        </script>
+
     </body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 </html>
